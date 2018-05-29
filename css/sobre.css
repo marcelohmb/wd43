@@ -1,0 +1,23 @@
+p {
+  color:blue;
+  background-color: yellow;
+}
+
+body {
+  font-family: "Lucida";
+
+}
+
+figure {
+  border: 1px solid red;
+  background-color: #CCC;
+  text-align: center;
+  }
+
+figcaption {
+  font-style: italic;
+}
+
+h1 {
+  background-image:url(../img/sobre-background.jpg);
+}
