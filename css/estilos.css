@@ -101,7 +101,10 @@ header {
 
 .destaque{
   margin-top: 10px;
+  position: relative;
 }
+
+
 
 .novidades{
   background-color: #F5DCDC;
@@ -237,8 +240,95 @@ footer .container{
 
 }
 
+
+
 .painel li:nth-child(2n):hover{
   transform: scale(1.2) rotateY(180deg);
+}
+
+.pause,
+.play{
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.pause{
+  border-left: 10px solid #900;
+  border-right: 10px solid #900;
+  height: 30px;
+  width: 5px;
+}
+
+.play{
+  border-left: 25px solid #900;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid transparent;
+}
+
+.painel li:nth-child(n+7){
+  display: none;
+}
+
+.painel-aberto li:nth-child(n+7){
+  display: inline-block;
+}
+
+.painel button{
+  /* posicionamento */
+  float: right;
+  margin-right: 10px;
+  padding: 10px;
+
+  /* estilo */
+  background-color: #333;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rbga(30, 30, 30, 0.5);
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+  text-shadow: 1px 0 1px black;
+
+  /* animação */
+  transition: 0.3s;
+
+
+  /* posicionamento */
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.painel button:hover {
+  background-color: #393939;
+  box-shadow: 1px 0 20px rbga(200, 200, 120, 0.9);
+}
+
+.painel button::after{
+  /* elemento vazio */
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+
+  /* triângulo */
+  border-top: 10px solid #333;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  /* posicionamento */
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+
+  /* animação */
+  transition: 0.3s;
+}
+
+.painel button:hover::after{
+  border-top-color: #393939;
 }
 
 @media (max-width: 939px){
